@@ -222,6 +222,7 @@ form.mb-4 {
     font-family: 'Arial', sans-serif;
     font-size: 2.5rem;
     font-weight: bold;
+    text-transform: uppercase;
     color: var(--text-light);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     margin: 0;
