@@ -226,3 +226,23 @@ form.mb-4 {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     margin: 0;
 }
+
+.liste-ingredients {
+    list-style-type: none;  /* Supprimer les puces par défaut */
+    padding-left: 0;        /* Supprimer le padding par défaut */
+}
+
+.liste-ingredients li {
+    margin-bottom: 5px;     /* Espacement entre les éléments */
+    padding-left: 20px;     /* Ajouter un espace pour les puces personnalisées */
+    position: relative;
+}
+
+.liste-ingredients li::before {
+    content: "•";           /* Utiliser un caractère personnalisé pour la puce */
+    color: #007bff;         /* Couleur de la puce */
+    font-size: 1.2em;       /* Taille de la puce */
+    position: absolute;
+    left: 0;
+    top: 0;
+}

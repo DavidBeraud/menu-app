@@ -1,10 +1,81 @@
 {
     "menus": {
         "Lundi": {
-            "midi": "Poulet rôti"
+            "midi": {
+                "recette": [
+                    "Poulet rôti",
+                    "Salade César"
+                ],
+                "ingredients": [
+                    "Tomate"
+                ]
+            }
+        },
+        "Mardi": {
+            "midi": {
+                "recette": [
+                    "Poulet rôti",
+                    "Salade César"
+                ],
+                "ingredients": [
+                    "Salade"
+                ]
+            }
         },
         "Mercredi": {
-            "midi": "Poulet rôti"
+            "midi": {
+                "recette": [
+                    "Poulet rôti",
+                    "Salade César"
+                ],
+                "ingredients": [
+                    "Tomate"
+                ]
+            }
+        },
+        "Jeudi": {
+            "midi": {
+                "recette": [
+                    "Poulet rôti",
+                    "Salade César"
+                ],
+                "ingredients": [
+                    "Salade"
+                ]
+            }
+        },
+        "Vendredi": {
+            "midi": {
+                "recette": [
+                    "Poulet rôti",
+                    "Salade César"
+                ],
+                "ingredients": [
+                    "Tomate"
+                ]
+            }
+        },
+        "Samedi": {
+            "midi": {
+                "recette": [
+                    "Salade César"
+                ],
+                "ingredients": [
+                    "Salade",
+                    "Tomate"
+                ]
+            }
+        },
+        "Dimanche": {
+            "midi": {
+                "recette": [
+                    "Poulet rôti",
+                    "Salade César"
+                ],
+                "ingredients": [
+                    "Salade"
+                ]
+            }
         }
     }
 }

@@ -183,18 +183,32 @@ def afficher_planning():
 
 @app.route('/planning/ajouter', methods=['POST'])
 def ajouter_planning():
+    # Récupérer les données du formulaire
     jour = request.form['jour']
     moment = request.form['moment']
-    recette = request.form['recette']
+    recette = request.form.getlist('recette')
+    ingredients = request.form.getlist('ingredients')  # Récupérer la liste des ingrédients
 
+    # Charger les données existantes
     menus = load_data(MENU_FILE, 'menus')
+
+    # Vérifier si le jour existe déjà dans le planning
     if jour not in menus:
         menus[jour] = {}
 
-    menus[jour][moment] = recette
+    # Ajouter la recette et les ingrédients au planning
+    menus[jour][moment] = {
+        'recette': recette,
+        'ingredients': ingredients  # Associer les ingrédients à la recette
+    }
+
+    # Sauvegarder les données mises à jour
     save_data(MENU_FILE, {"menus": menus})
 
-    flash('Recette ajoutée avec succès!', 'success')
+    # Afficher un message de succès
+    flash('Recette et ingrédients ajoutés avec succès!', 'success')
+
+    # Rediriger vers la page du planning
     return redirect(url_for('afficher_planning'))
 
 @app.route('/planning/supprimer/<string:jour>')

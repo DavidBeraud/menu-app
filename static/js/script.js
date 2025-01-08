@@ -205,3 +205,37 @@ document.addEventListener('DOMContentLoaded', async () => {
         alert('Une erreur est survenue lors du chargement de la page.');
     }
 });
+
+async function loadIngredients() {
+    try {
+        const response = await fetch('/static/data/ingredients.json');
+        if (!response.ok) {
+            throw new Error('Erreur lors du chargement des ingrédients');
+        }
+        const data = await response.json();
+        console.log('Données chargées:', data);
+
+        // Retourner les ingrédients organisés par catégorie
+        return data.ingredients;
+    } catch (error) {
+        console.error('Erreur:', error);
+        alert('Impossible de charger les ingrédients. Veuillez réessayer plus tard.');
+        return {};
+    }
+}
+document.addEventListener('DOMContentLoaded', async () => {
+    try {
+        // Charger les ingrédients
+        const ingredientsData = await loadIngredients();
+        console.log('Ingrédients chargés:', ingredientsData);
+
+        // Remplir le sélecteur d'ingrédients
+        const selectElement = document.getElementById('ingredients');
+        if (selectElement) {
+            fillIngredientSelect(selectElement, ingredientsData);
+        }
+    } catch (error) {
+        console.error('Erreur lors de l\'initialisation:', error);
+        alert('Une erreur est survenue lors du chargement de la page.');
+    }
+});

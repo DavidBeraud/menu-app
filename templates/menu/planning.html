@@ -5,9 +5,10 @@
     <h2>Gestion du menu de la semaine</h2>
 
     <form method="POST" action="{{ url_for('ajouter_planning') }}" class="mb-4">
-        <div class="row align-items-end mb-5"> <!-- Utilisez align-items-end pour aligner les éléments en bas -->
+        <div class="row align-items-end mb-5">
             <!-- Champ Jour -->
-            <div class="col-md-3">
+            <div class="col-md-2">
+                <label for="jour" class="form-label">Jour</label>
                 <select id="jour" name="jour" class="form-control" required>
                     {% for jour in ["Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi", "Dimanche"] %}
                         <option value="{{ jour }}">{{ jour }}</option>
@@ -16,7 +17,8 @@
             </div>
     
             <!-- Champ Moment -->
-            <div class="col-md-3">
+            <div class="col-md-2">
+                <label for="moment" class="form-label">Moment</label>
                 <select id="moment" name="moment" class="form-control" required>
                     <option value="midi">Midi</option>
                     <option value="soir">Soir</option>
@@ -25,16 +27,27 @@
     
             <!-- Champ Recette -->
             <div class="col-md-3">
-                <select id="recette" name="recette" class="form-control" required>
+                <label for="recette" class="form-label">Recette</label>
+                <select id="recette" name="recette" class="form-control" multiple>
                     {% for recette in recettes %}
                         <option value="{{ recette['nom'] }}">{{ recette['nom'] }}</option>
                     {% endfor %}
                 </select>
             </div>
     
+            <!-- Champ Ingrédients -->
+            <div class="col-md-3">
+                <label for="ingredients" class="form-label">Ingrédients</label>
+                <select id="ingredients" name="ingredients" class="form-control" multiple>
+                    {% for ingredient in ingredients %}
+                        <option value="{{ ingredient['nom'] }}">{{ ingredient['nom'] }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+    
             <!-- Bouton Ajouter -->
             <div class="col-md-2">
-                <button type="submit" class="btn btn-success w-100">Ajouter</button>
+                <button type="submit" class="btn btn-success w-100 mt-4">Ajouter</button>
             </div>
         </div>
     </form>
@@ -51,28 +64,63 @@
                 {% endfor %}
             {% endif %}
        {% endwith %}
-        <div class="table-responsive">
-            <table class="table table-bordered table-striped table-hover">
-                <thead class="table-dark">
-                    <tr>
-                        <th>Jour</th>
-                        <th>Repas du midi</th>
-                        <th>Repas du soir</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {% set jours_semaine = ["Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi", "Dimanche"] %}
-                    {% for jour in jours_semaine %}
-                        <tr>
-                            <td>{{ jour }}</td>
-                            <td>{{ menus[jour]['midi'] if jour in menus and 'midi' in menus[jour] else "---" }}</td>
-                            <td>{{ menus[jour]['soir'] if jour in menus and 'soir' in menus[jour] else "---" }}</td>
-                        </tr>
-                    {% endfor %}
-                </tbody>
-            </table>
-        </div>
-    </div>
+       <div class="table-responsive">
+              <table class="table table-bordered table-striped table-hover">
+                  <thead class="table-dark">
+                      <tr>
+                          <th>Jour</th>
+                          <th>Repas du midi</th>
+                          <th>Repas du soir</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      {% set jours_semaine = ["Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi", "Dimanche"] %}
+                      {% for jour in jours_semaine %}
+                          <tr>
+                              <td>{{ jour }}</td>
+                              <!-- Repas du midi -->
+                              <td>
+                                  {% if jour in menus and menus[jour].get('midi') %}
+                                      <!-- Afficher les recettes -->
+                                      {% if menus[jour]['midi']['recette'] %}
+                                              {% for recette in menus[jour]['midi']['recette'] %}
+                                                  <li>{{ recette }}</li>
+                                              {% endfor %}
+                                      {% endif %}
+                                      <!-- Afficher les ingrédients -->
+                                      {% if menus[jour]['midi']['ingredients'] %}
+                                              {% for ingredient in menus[jour]['midi']['ingredients'] %}
+                                                  <li>{{ ingredient }}</li>
+                                              {% endfor %}
+                                      {% endif %}
+                                  {% else %}
+                                      ---
+                                  {% endif %}
+                              </td>
+                              <!-- Repas du soir -->
+                              <td>
+                                  {% if jour in menus and menus[jour].get('soir') %}
+                                      <!-- Afficher les recettes -->
+                                      {% if menus[jour]['soir']['recette'] %}
+                                              {% for recette in menus[jour]['soir']['recette'] %}
+                                                  <li>{{ recette }}</li>
+                                              {% endfor %}
+                                      {% endif %}
+                                      <!-- Afficher les ingrédients -->
+                                      {% if menus[jour]['soir']['ingredients'] %}
+                                              {% for ingredient in menus[jour]['soir']['ingredients'] %}
+                                                  <li>{{ ingredient }}</li>
+                                              {% endfor %}
+                                      {% endif %}
+                                  {% else %}
+                                      ---
+                                  {% endif %}
+                              </td>
+                          </tr>
+                      {% endfor %}
+                  </tbody>
+              </table>
+          </div>
 
     <div class="d-flex gap-2 mb-4">
         <!-- Bouton pour imprimer -->
