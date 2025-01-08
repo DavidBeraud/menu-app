@@ -14,7 +14,7 @@
             <div class="col-auto">
                 <form method="GET" action="{{ url_for('liste_ingredients') }}">
                     <div class="selector">
-                        <select name="categorie" class="form-select" onchange="this.form.submit()">
+                        <select name="categorie" class="form-control" onchange="this.form.submit()">
                             <option value="">Choisissez une catégorie</option>
                             {% for category in ingredients.keys() %}
                                 <option value="{{ category }}" {% if category == selected_category %}selected{% endif %}>
@@ -30,7 +30,6 @@
 
     <!-- Afficher le tableau de la catégorie sélectionnée -->
     {% if selected_category %}
-        <h3 class="mt-4 mb-3 text-center">{{ selected_category|capitalize }}</h3>
         <div class="d-flex justify-content-center">
             <div class="col-md-6">
                 <table class="table table-striped table-hover">

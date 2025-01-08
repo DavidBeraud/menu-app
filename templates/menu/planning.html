@@ -1,70 +1,86 @@
 {% extends "index.html" %}
 {% block content %}
 
-<div class="container mt-5">
-    <h1>Gestion du menu de la semaine</h1>
+<div>
+    <h2>Gestion du menu de la semaine</h2>
 
-    <!-- Formulaire pour ajouter une recette au menu -->
     <form method="POST" action="{{ url_for('ajouter_planning') }}" class="mb-4">
-        <div class="row mb-3">
-            <div class="col-md-4">
-                <label for="jour" class="form-label">Jour</label>
+        <div class="row align-items-end mb-5"> <!-- Utilisez align-items-end pour aligner les éléments en bas -->
+            <!-- Champ Jour -->
+            <div class="col-md-3">
                 <select id="jour" name="jour" class="form-control" required>
                     {% for jour in ["Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi", "Dimanche"] %}
                         <option value="{{ jour }}">{{ jour }}</option>
                     {% endfor %}
                 </select>
             </div>
-            <div class="col-md-4">
-                <label for="moment" class="form-label">Moment</label>
+    
+            <!-- Champ Moment -->
+            <div class="col-md-3">
                 <select id="moment" name="moment" class="form-control" required>
                     <option value="midi">Midi</option>
                     <option value="soir">Soir</option>
                 </select>
             </div>
-            <div class="col-md-4">
-                <label for="recette" class="form-label">Recette</label>
+    
+            <!-- Champ Recette -->
+            <div class="col-md-3">
                 <select id="recette" name="recette" class="form-control" required>
                     {% for recette in recettes %}
                         <option value="{{ recette['nom'] }}">{{ recette['nom'] }}</option>
                     {% endfor %}
                 </select>
             </div>
+    
+            <!-- Bouton Ajouter -->
+            <div class="col-md-2">
+                <button type="submit" class="btn btn-success w-100">Ajouter</button>
+            </div>
         </div>
-        <button type="submit" class="btn btn-primary">Ajouter au menu</button>
     </form>
 
     <!-- Zone à imprimer -->
     <div id="printable-area">
-        <h2>Menu de la semaine</h2>
-        <table class="table table-bordered">
-            <thead>
-                <tr>
-                    <th>Jour</th>
-                    <th>Repas du midi</th>
-                    <th>Repas du soir</th>
-                </tr>
-            </thead>
-            <tbody>
-                {% set jours_semaine = ["Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi", "Dimanche"] %}
-                {% for jour in jours_semaine %}
-                    <tr>
-                        <td>{{ jour }}</td>
-                        <td>{{ menus[jour]['midi'] if jour in menus and 'midi' in menus[jour] else "---" }}</td>
-                        <td>{{ menus[jour]['soir'] if jour in menus and 'soir' in menus[jour] else "---" }}</td>
-                    </tr>
+        <h2 class="mt-4">Menu de la semaine</h2>
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="alert alert-{{ category }}">
+                        {{ message }}
+                    </div>
                 {% endfor %}
-            </tbody>
-        </table>
+            {% endif %}
+       {% endwith %}
+        <div class="table-responsive">
+            <table class="table table-bordered table-striped table-hover">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Jour</th>
+                        <th>Repas du midi</th>
+                        <th>Repas du soir</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% set jours_semaine = ["Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi", "Dimanche"] %}
+                    {% for jour in jours_semaine %}
+                        <tr>
+                            <td>{{ jour }}</td>
+                            <td>{{ menus[jour]['midi'] if jour in menus and 'midi' in menus[jour] else "---" }}</td>
+                            <td>{{ menus[jour]['soir'] if jour in menus and 'soir' in menus[jour] else "---" }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
     </div>
 
     <div class="d-flex gap-2 mb-4">
         <!-- Bouton pour imprimer -->
-        <button id="print-button" class="btn btn-success">Imprimer le menu</button>
+        <button id="print-button" class="btn btn-success"><i class="fas fa-print"></i> Imprimer le menu</button>
     
         <!-- Formulaire pour réinitialiser le menu -->
         <form id="reinitialiser-form" method="POST" action="{{ url_for('reinitialiser_planning') }}" class="d-inline">
-            <button type="submit" class="btn btn-danger">Réinitialiser le menu</button>
+            <button type="submit" class="btn btn-danger"><i class="fas fa-trash"></i> Réinitialiser le menu</button>
         </form>
     </div>
 </div>

@@ -1,3 +1,10 @@
 {
-    "menus": {}
+    "menus": {
+        "Lundi": {
+            "midi": "Poulet rôti"
+        },
+        "Mercredi": {
+            "midi": "Poulet rôti"
+        }
+    }
 }
