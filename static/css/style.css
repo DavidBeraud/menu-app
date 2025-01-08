@@ -1,0 +1,279 @@
+/* Couleurs de base */
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #0056b3;
+    --background-light: #f8f9fa;
+    --background-dark: #343a40;
+    --text-light: #ffffff;
+    --text-dark: #333333;
+    --accent-color: #ffc107;
+    --error-color: #dc3545;
+}
+
+/* Style pour le titre h1 */
+h1 {
+    font-family: 'Arial', sans-serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--text-dark);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+/* Style pour le titre h2 */
+h2 {
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: var(--text-dark);
+    text-align: center;
+    margin-bottom: 1.5rem;
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Style pour le conteneur du titre */
+.container-fluid.bg-light {
+    background-color: var(--background-light) !important;
+    padding: 10px;
+    border-bottom: 3px solid var(--primary-color);
+}
+
+/* Style pour le menu */
+.navbar {
+    background-color: var(--background-dark);
+}
+
+.navbar .navbar-nav .nav-item .nav-link {
+    font-family: 'Arial', sans-serif !important;
+    font-size: 1.2rem !important;
+    text-transform: uppercase !important;
+    color: var(--text-light) !important;
+    margin: 0 30px !important;
+    transition: all 0.3s ease !important;
+}
+
+.navbar .navbar-nav .nav-item .nav-link:hover {
+    color: var(--primary-color) !important;
+}
+
+/* Style pour les images des cartes */
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+/* Style pour les cartes */
+.card {
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+/* Effet de profondeur au survol des cartes */
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* Style de base pour tous les boutons */
+.btn {
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+/* Style pour le bouton "Voir la recette" (Primaire) */
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+}
+
+.btn-primary:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
+}
+
+/* Style pour le bouton "Modifier" (Warning) */
+.btn-warning {
+    background-color: var(--accent-color);
+    color: var(--text-dark);
+}
+
+.btn-warning:hover {
+    background-color: #e0a800;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(255, 193, 7, 0.3);
+}
+
+/* Style pour le bouton "Supprimer" (Danger) */
+.btn-danger {
+    background-color: var(--error-color);
+    color: var(--text-light);
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(220, 53, 69, 0.3);
+}
+
+/* Style pour la table */
+.table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: var(--background-light);
+}
+
+/* Style pour l'en-tête de la table */
+.table thead {
+    background-color: var(--background-dark);
+    color: var(--text-light);
+}
+
+/* Style pour les cellules de l'en-tête */
+.table th {
+    padding: 12px;
+    text-align: left;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Style pour les lignes du tableau */
+.table tbody tr {
+    transition: background-color 0.3s ease;
+}
+
+/* Style pour les lignes alternées */
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* Effet de survol sur les lignes */
+.table-hover tbody tr:hover {
+    background-color: rgba(0, 123, 255, 0.1);
+}
+
+/* Style pour les cellules du tableau */
+.table td {
+    padding: 12px;
+    vertical-align: middle;
+    border-top: 1px solid #dee2e6;
+}
+
+/* Style pour la première colonne (numéro de ligne) */
+.table th:first-child,
+.table td:first-child {
+    padding-left: 20px;
+}
+
+/* Style pour la dernière colonne (actions) */
+.table th:last-child,
+.table td:last-child {
+    padding-right: 20px;
+}
+
+/* Style pour les boutons dans la colonne "Actions" */
+.table .btn-action {
+    margin-right: 5px;
+}
+
+/* Style pour les boutons dans la table */
+.table .btn {
+    font-size: 12px;
+    padding: 6px 12px;
+}
+
+/* Style pour le formulaire */
+form.mb-4 {
+    margin: 20px 0;
+}
+
+/* Style pour le conteneur du sélecteur */
+.selector {
+    width: 300px;
+    position: relative;
+}
+
+/* Style pour le menu déroulant */
+.form-select {
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 16px;
+    font-family: 'Arial', sans-serif;
+    color: var(--text-dark);
+    background-color: var(--background-light);
+    border: 2px solid var(--primary-color);
+    border-radius: 8px;
+    appearance: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Style pour le menu déroulant au survol */
+.form-select:hover {
+    border-color: var(--secondary-color);
+    background-color: #e9ecef;
+}
+
+/* Style pour le menu déroulant lorsqu'il est ouvert */
+.form-select:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
+}
+
+/* Style pour les options du menu déroulant */
+.form-select option {
+    padding: 10px;
+    background-color: var(--background-light);
+    color: var(--text-dark);
+}
+
+/* Style pour la flèche du menu déroulant */
+.selector::after {
+    content: '▼';
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: var(--primary-color);
+    font-size: 12px;
+    transition: color 0.3s ease;
+}
+
+/* Style pour la flèche au survol */
+.selector:hover::after {
+    color: var(--secondary-color);
+}
+
+/* Style pour l'en-tête */
+.header {
+    background-color: var(--background-dark);
+    padding: 20px 0;
+    border-bottom: 3px solid var(--primary-color);
+}
+
+.header h1 {
+    font-family: 'Arial', sans-serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--text-light);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    margin: 0;
+}

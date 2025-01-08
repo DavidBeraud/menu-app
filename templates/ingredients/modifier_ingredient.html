@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="container mt-5">
+        <h1>Modifier l'ingrédient : {{ ingredient.nom }}</h1>
+        <form method="POST">
+            <div class="mb-3">
+                <label for="nom" class="form-label">Nom de l'ingrédient:</label>
+                <input type="text" id="nom" name="nom" class="form-control" value="{{ ingredient.nom }}" required>
+            </div>
+            <div class="mb-3">
+                <label for="unite" class="form-label">Unité:</label>
+                <input type="text" id="unite" name="unite" class="form-control" value="{{ ingredient.unite }}" required>
+            </div>
+            <button type="submit" class="btn btn-warning">Modifier</button>
+        </form>
+    </div>
+{% endblock %}

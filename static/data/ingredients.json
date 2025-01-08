@@ -1,0 +1,90 @@
+{
+    "ingredients": {
+        "Entrée": [
+            "Salade",
+            "Tomate",
+            "Endives",
+            "Avocat",
+            "Concombre",
+            "Betterave ",
+            "Taboulé",
+            "test"
+        ],
+        "Viande": [
+            "Steak",
+            "Viande hachée",
+            "Escalope de poulet",
+            "Rôti",
+            "Filet mignon",
+            "Poulet entier",
+            "Pignon de poulet",
+            "Cuisse de poulet"
+        ],
+        "Charcuterie": [
+            "Blanc de poulet",
+            "Chorizo",
+            "Saucisson",
+            "Jambon",
+            "Bacon",
+            "Lardon",
+            "Mortadelle"
+        ],
+        "Poisson": [
+            "Poisson pané",
+            "Merlan",
+            "Saumon",
+            "Thon"
+        ],
+        "Légumes": [
+            "Carotte",
+            "Petit pois",
+            "Choux-fleur",
+            "Potimarron",
+            "Haricot vert",
+            "Épinard",
+            "Brocolis",
+            "Pot-au-feu",
+            "Soupe"
+        ],
+        "Féculents": [
+            "Riz",
+            "Pâtes",
+            "Quenelle",
+            "Pomme de terre",
+            "Lentille",
+            "Pain",
+            "Chips",
+            "Pâte à pizza",
+            "Pâte feuilletée",
+            "Pâte brisée"
+        ],
+        "Dessert fromage": [
+            "Compote",
+            "Yaourt",
+            "Laitière",
+            "Gruyère râpé"
+        ],
+        "Epices et condiments base": [
+            "Huile d'olive",
+            "Huile de noix",
+            "Huile",
+            "Chapelure",
+            "Sel",
+            "Beurre",
+            "Lait",
+            "Farine",
+            "Œuf",
+            "Crème fraîche"
+        ],
+        "Gouter et petit dejeuner": [
+            "Brioche tressée",
+            "Céréales",
+            "Nutella",
+            "Choco",
+            "Gâteau marbré",
+            "Ballisto Jaune",
+            "Confiture",
+            "Café"
+        ]
+    }
+}

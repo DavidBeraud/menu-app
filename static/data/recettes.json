@@ -1,0 +1,55 @@
+{
+    "recettes": [
+        {
+            "nom": "Poulet rôti",
+            "categorie": "plat_principal",
+            "personnes": 4,
+            "difficulte": "facile",
+            "image": "poulet_roti.jpg",
+            "ingredients": [
+                {
+                    "nom": "Poulet",
+                    "quantite": 1.0,
+                    "unite": "piece"
+                }
+            ],
+            "etapes": [
+                "Préchauffez le four à 180°C.",
+                "Assaisonnez le poulet avec du sel, du poivre et du beurre.",
+                "Enfournez le poulet pendant 1 heure en arrosant régulièrement.",
+                "qdfdsdfdffd",
+                "sqssddqs dqs dqs"
+            ],
+            "temps_cuisson": 25
+        },
+        {
+            "nom": "Salade César",
+            "categorie": "entree",
+            "personnes": 2,
+            "difficulte": "facile",
+            "image": "salade-cesar.webp",
+            "ingredients": [
+                {
+                    "nom": "Laitue",
+                    "quantite": 200,
+                    "unite": "g"
+                },
+                {
+                    "nom": "Poulet grillé",
+                    "quantite": 150,
+                    "unite": "g"
+                },
+                {
+                    "nom": "Croûtons",
+                    "quantite": 50,
+                    "unite": "g"
+                }
+            ],
+            "etapes": [
+                "Lavez et coupez la laitue.",
+                "Ajoutez le poulet grillé et les croûtons.",
+                "Servez avec une sauce César."
+            ]
+        }
+    ]
+}

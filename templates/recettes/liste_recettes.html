@@ -1,0 +1,27 @@
+{% extends "index.html" %}
+{% block content %}
+    <h2 class="mb-4">Liste des Recettes</h2>
+    <div class="text-center mb-4">
+        <a href="{{ url_for('ajouter_recette') }}" class="btn btn-success mb-3">Ajouter une recette</a>
+    </div>
+    <div class="row">
+        {% for recette in recettes %}
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="{{ url_for('static', filename='images/' + recette.image) }}" class="card-img-top" alt="{{ recette.nom }}">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ recette.nom }}</h5>
+                        <p class="card-text">
+                            <strong>Catégorie:</strong> {{ recette.categorie }}<br>
+                            <strong>Personnes:</strong> {{ recette.personnes }}<br>
+                            <strong>Difficulté:</strong> {{ recette.difficulte }}
+                        </p>
+                        <a href="{{ url_for('details_recette', id=loop.index0) }}" class="btn btn-primary">Recette</a>
+                        <a href="{{ url_for('modifier_recette', id=loop.index0) }}" class="btn btn-warning">Modifier</a>
+                        <a href="{{ url_for('supprimer_recette', id=loop.index0) }}" class="btn btn-danger" onclick="return confirm('Êtes-vous sûr de vouloir supprimer cette recette ?')">Supprimer</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

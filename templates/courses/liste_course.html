@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="container mt-5">
+        <h1 class="mb-4">Liste des courses</h1>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Ingrédient</th>
+                    <th>Quantité</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for ingredient, quantite in courses.items() %}
+                <tr>
+                    <td>{{ ingredient }}</td>
+                    <td>{{ quantite }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+{% endblock %}
+
+

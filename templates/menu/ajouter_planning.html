@@ -1,0 +1,50 @@
+{% extends "index.html" %}
+{% block content %}
+    <h2>Ajouter un Menu</h2>
+    <form method="POST">
+        <div class="mb-3">
+            <label for="semaine" class="form-label">Semaine (AAAA-MM-JJ):</label>
+            <input type="text" id="semaine" name="semaine" class="form-control" required>
+        </div>
+        <h3>Lundi</h3>
+        <div class="mb-3">
+            <label for="lundi_petit_dejeuner" class="form-label">Petit-déjeuner:</label>
+            <input type="text" id="lundi_petit_dejeuner" name="lundi_petit_dejeuner" class="form-control" required>
+        </div>
+        <div class="mb-3">
+            <label for="lundi_dejeuner" class="form-label">Déjeuner:</label>
+            <input type="text" id="lundi_dejeuner" name="lundi_dejeuner" class="form-control" required>
+        </div>
+        <div class="mb-3">
+            <label for="lundi_diner" class="form-label">Dîner:</label>
+            <input type="text" id="lundi_diner" name="lundi_diner" class="form-control" required>
+        </div>
+        <h3>Mardi</h3>
+        <div class="mb-3">
+            <label for="mardi_petit_dejeuner" class="form-label">Petit-déjeuner:</label>
+            <input type="text" id="mardi_petit_dejeuner" name="mardi_petit_dejeuner" class="form-control" required>
+        </div>
+        <div class="mb-3">
+            <label for="mardi_dejeuner" class="form-label">Déjeuner:</label>
+            <input type="text" id="mardi_dejeuner" name="mardi_dejeuner" class="form-control" required>
+        </div>
+        <div class="mb-3">
+            <label for="mardi_diner" class="form-label">Dîner:</label>
+            <input type="text" id="mardi_diner" name="mardi_diner" class="form-control" required>
+        </div>
+        <h3>Mercredi</h3>
+        <div class="mb-3">
+            <label for="mercredi_petit_dejeuner" class="form-label">Petit-déjeuner:</label>
+            <input type="text" id="mercredi_petit_dejeuner" name="mercredi_petit_dejeuner" class="form-control" required>
+        </div>
+        <div class="mb-3">
+            <label for="mercredi_dejeuner" class="form-label">Déjeuner:</label>
+            <input type="text" id="mercredi_dejeuner" name="mercredi_dejeuner" class="form-control" required>
+        </div>
+        <div class="mb-3">
+            <label for="mercredi_diner" class="form-label">Dîner:</label>
+            <input type="text" id="mercredi_diner" name="mercredi_diner" class="form-control" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Ajouter</button>
+    </form>
+{% endblock %}
