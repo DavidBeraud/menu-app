@@ -1,17 +1,75 @@
-{% extends "base.html" %}
+{% extends "index.html" %}
+
 {% block content %}
-    <div class="container mt-5">
-        <h1>Modifier l'ingrédient : {{ ingredient.nom }}</h1>
-        <form method="POST">
-            <div class="mb-3">
-                <label for="nom" class="form-label">Nom de l'ingrédient:</label>
-                <input type="text" id="nom" name="nom" class="form-control" value="{{ ingredient.nom }}" required>
-            </div>
-            <div class="mb-3">
-                <label for="unite" class="form-label">Unité:</label>
-                <input type="text" id="unite" name="unite" class="form-control" value="{{ ingredient.unite }}" required>
-            </div>
-            <button type="submit" class="btn btn-warning">Modifier</button>
-        </form>
+    <!-- Titre de la page -->
+    <h2 class="mb-4 text-center">Modifier l'Ingrédient</h2>
+
+   <!-- Formulaire pour modifier un ingrédient -->
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <form method="POST" action="{{ url_for('modifier_ingredient', id=ingredient.id) }}">
+                <!-- Champ pour le nom de l'ingrédient -->
+                <div class="form-group">
+                    <label for="nom">Nom de l'ingrédient</label>
+                    <input type="text" class="form-control" id="nom" name="nom" value="{{ ingredient.nom }}" required>
+                </div>
+
+                <!-- Champ pour la catégorie (liste déroulante) -->
+                <div class="form-group">
+                    <label for="categorie">Catégorie</label>
+                    <select class="form-control" id="categorie" name="categorie" required>
+                        {% for categorie in categories %}
+                            <option value="{{ categorie }}" {% if ingredient.catégorie == categorie %}selected{% endif %}>
+                                {{ categorie }}
+                            </option>
+                        {% endfor %}
+                    </select>
+                </div>
+
+                <!-- Champ pour la sous-catégorie (liste déroulante) -->
+                <div class="form-group">
+                    <label for="sous_categorie">Sous-catégorie</label>
+                    <select class="form-control" id="sous_categorie" name="sous_categorie">
+                        {% if ingredient.catégorie in sous_categories %}
+                            {% for sous_cat in sous_categories[ingredient.catégorie] %}
+                                <option value="{{ sous_cat }}" {% if ingredient.sous_catégorie == sous_cat %}selected{% endif %}>
+                                    {{ sous_cat }}
+                                </option>
+                            {% endfor %}
+                        {% endif %}
+                    </select>
+                </div>
+
+                <!-- Champ pour l'unité (liste déroulante) -->
+                <div class="form-group">
+                    <label for="unite">Unité</label>
+                    <select class="form-control" id="unite" name="unite" required>
+                        {% for unite in unites %}
+                            <option value="{{ unite }}" {% if ingredient.unité == unite %}selected{% endif %}>
+                                {{ unite }}
+                            </option>
+                        {% endfor %}
+                    </select>
+                </div>
+
+                <!-- Champ pour les calories -->
+                <div class="form-group">
+                    <label for="calories">Calories</label>
+                    <input type="number" class="form-control" id="calories" name="calories" value="{{ ingredient.calories }}">
+                </div>
+
+                <!-- Champ pour les alternatives -->
+                <div class="form-group">
+                    <label for="alternatives">Alternatives (séparées par des virgules)</label>
+                    <input type="text" class="form-control" id="alternatives" name="alternatives" value="{{ ingredient.alternatives | join(',') }}">
+                </div>
+
+                <!-- Bouton pour soumettre le formulaire -->
+                <button type="submit" class="btn btn-warning">Modifier</button>
+            </form>
+        </div>
     </div>
+</div>
+
 {% endblock %}

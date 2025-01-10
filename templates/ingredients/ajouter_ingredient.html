@@ -1,19 +1,71 @@
 {% extends "index.html" %}
+
 {% block content %}
-    <h2>Ajouter un Ingrédient</h2>
-    <form method="POST">
-        <div class="mb-3">
-            <label for="category" class="form-label">Catégorie:</label>
-            <select id="category" name="category" class="form-control" required>
-                {% for category in categories %}
-                    <option value="{{ category }}">{{ category|capitalize }}</option>
-                {% endfor %}
-            </select>
+    <!-- Titre de la page -->
+    <h2 class="mb-4 text-center">Ajouter un Ingrédient</h2>
+
+    <!-- Formulaire pour ajouter un ingrédient -->
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <form method="POST" action="{{ url_for('ajouter_ingredient') }}">
+                    <!-- Champ pour le nom de l'ingrédient -->
+                    <div class="form-group">
+                        <label for="nom">Nom de l'ingrédient</label>
+                        <input type="text" class="form-control" id="nom" name="nom" required>
+                    </div>
+
+                    <!-- Menu déroulant pour la catégorie -->
+                    <div class="form-group">
+                        <label for="categorie">Catégorie</label>
+                        <select class="form-control" id="categorie" name="categorie" required>
+                            <option value="">Sélectionnez une catégorie</option>
+                            {% for categorie in categories %}
+                                <option value="{{ categorie }}">{{ categorie }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+
+                    <!-- Menu déroulant pour la sous-catégorie -->
+                    <div class="form-group">
+                        <label for="sous_categorie">Sous-catégorie</label>
+                        <select class="form-control" id="sous_categorie" name="sous_categorie">
+                            <option value="">Sélectionnez une sous-catégorie</option>
+                        </select>
+                    </div>
+
+                    <!-- Menu déroulant pour l'unité -->
+                    <div class="form-group">
+                        <label for="unite">Unité</label>
+                        <select class="form-control" id="unite" name="unite" required>
+                            <option value="">Sélectionnez une unité</option>
+                            {% for unite in unites %}
+                                <option value="{{ unite }}">{{ unite }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+
+                    <!-- Champ pour les calories -->
+                    <div class="form-group">
+                        <label for="calories">Calories</label>
+                        <input type="number" class="form-control" id="calories" name="calories">
+                    </div>
+
+                    <!-- Champ pour les alternatives -->
+                    <div class="form-group">
+                        <label for="alternatives">Alternatives (séparées par des virgules)</label>
+                        <input type="text" class="form-control" id="alternatives" name="alternatives">
+                    </div>
+
+                    <!-- Bouton pour soumettre le formulaire -->
+                    <button type="submit" class="btn btn-success">Ajouter</button>
+                </form>
+            </div>
         </div>
-        <div class="mb-3">
-            <label for="nom" class="form-label">Nom de l'ingrédient:</label>
-            <input type="text" id="nom" name="nom" class="form-control" required>
-        </div>
-        <button type="submit" class="btn btn-primary">Ajouter</button>
-    </form>
+    </div>
+
+    <script id="sous-categories-data" type="application/json">
+        {{ sous_categories | tojson | safe }}
+    </script>
+
 {% endblock %}

@@ -1,91 +1,1020 @@
 {
-    "ingredients": {
-        "Entrée": [
-            "Salade",
-            "Tomate",
-            "Endives",
-            "Avocat",
-            "Concombre",
-            "Betterave ",
-            "Taboulé",
-            "test"
-        ],
-        "Viande": [
-            "Steak",
-            "Viande hachée",
-            "Escalope de poulet",
-            "Rôti",
-            "Filet mignon",
-            "Poulet entier",
-            "Pignon de poulet",
-            "Cuisse de poulet"
-        ],
-        "Charcuterie": [
-            "Blanc de poulet",
-            "Chorizo",
-            "Saucisson",
-            "Jambon",
-            "Bacon",
-            "Lardon",
-            "Mortadelle"
-        ],
-        "Poisson": [
-            "Poisson pané",
-            "Merlan",
-            "Saumon",
-            "Thon"
-        ],
-        "Légumes": [
-            "Carotte",
-            "Petit pois",
-            "Choux-fleur",
-            "Potimarron",
-            "Haricot vert",
-            "Épinard",
-            "Brocolis",
-            "Pot-au-feu",
-            "Soupe"
-        ],
-        "Féculents": [
-            "Riz",
-            "Pâtes",
-            "Quenelle",
-            "Pomme de terre",
-            "Lentille",
-            "Pain",
-            "Chips",
-            "Pâte à pizza",
-            "Pâte feuilletée",
-            "Pâte brisée"
-        ],
-        "Dessert fromage": [
-            "Compote",
-            "Yaourt",
-            "Laitière",
-            "Gruyère râpé"
-        ],
-        "Epices et condiments base": [
-            "Huile d'olive",
-            "Huile de noix",
-            "Huile",
-            "Chapelure",
-            "Sel",
-            "Beurre",
-            "Lait",
-            "Farine",
-            "Œuf",
-            "Crème fraîche",
-            "Moutarde"
-        ],
-        "Gouter et petit dejeuner": [
-            "Brioche tressée",
-            "Céréales",
-            "Nutella",
-            "Choco",
-            "Gâteau marbré",
-            "Ballisto Jaune",
-            "Confiture",
-            "Café"
-        ]
-    }
+    "ingredients": [
+        {
+            "id": "f718b92b-c34f-4d29-98e3-f8afb3657727",
+            "nom": "Salade",
+            "catégorie": "Entrée",
+            "sous_catégorie": "Légumes verts",
+            "unité": "",
+            "calories": 5,
+            "protéines": 0.5,
+            "glucides": 1,
+            "lipides": 0.1,
+            "alternatives": [
+                "Épinard",
+                "Roquette"
+            ]
+        },
+        {
+            "id": "cc15e8a7-9e03-40a6-ac20-6ac74aea7d49",
+            "nom": "Tomate",
+            "catégorie": "Entrée",
+            "sous_catégorie": "Légumes",
+            "unité": "pièce",
+            "calories": 18,
+            "protéines": 0.9,
+            "glucides": 3.9,
+            "lipides": 0.2,
+            "alternatives": [
+                "Tomate cerise",
+                "Tomate séchée"
+            ]
+        },
+        {
+            "id": "7818045a-0ad1-4aa8-b784-70a2913b0c63",
+            "nom": "Endives",
+            "catégorie": "Entrée",
+            "sous_catégorie": "Légumes",
+            "unité": "pièce",
+            "calories": 17,
+            "protéines": 1.3,
+            "glucides": 3.4,
+            "lipides": 0.2,
+            "alternatives": [
+                "Chicorée",
+                "Radicchio"
+            ]
+        },
+        {
+            "id": "16265340-8f6f-4ff2-8fad-a7adbfc1a931",
+            "nom": "Avocat",
+            "catégorie": "Entrée",
+            "sous_catégorie": "Fruits",
+            "unité": "pièce",
+            "calories": 160,
+            "protéines": 2,
+            "glucides": 9,
+            "lipides": 15,
+            "alternatives": [
+                "Banane",
+                "Mangue"
+            ]
+        },
+        {
+            "id": "e1d1cda8-7c3e-461a-ad51-46db21eb36cf",
+            "nom": "Concombre",
+            "catégorie": "Entrée",
+            "sous_catégorie": "Légumes",
+            "unité": "pièce",
+            "calories": 16,
+            "protéines": 0.7,
+            "glucides": 3.6,
+            "lipides": 0.1,
+            "alternatives": [
+                "Courgette",
+                "Poivron"
+            ]
+        },
+        {
+            "id": "05079370-48c8-480b-8388-03db9d1e59ec",
+            "nom": "Betterave",
+            "catégorie": "Entrée",
+            "sous_catégorie": "Légumes racines",
+            "unité": "kg",
+            "calories": 43,
+            "protéines": 1.6,
+            "glucides": 10,
+            "lipides": 0.2,
+            "alternatives": [
+                "Carotte",
+                "Navet"
+            ]
+        },
+        {
+            "id": "9c8d397f-5e5c-48d0-825f-c5b611cdc885",
+            "nom": "Taboulé",
+            "catégorie": "Entrée",
+            "sous_catégorie": "Préparations",
+            "unité": "g",
+            "calories": 120,
+            "protéines": 3,
+            "glucides": 20,
+            "lipides": 2,
+            "alternatives": [
+                "Quinoa",
+                "Boulgour"
+            ]
+        },
+        {
+            "id": "bfa1bc65-d8a1-47b7-a5b7-4a20018fecee",
+            "nom": "Steak",
+            "catégorie": "Viande",
+            "sous_catégorie": "Bœuf",
+            "unité": "kg",
+            "calories": 250,
+            "protéines": 26,
+            "glucides": 0,
+            "lipides": 15,
+            "alternatives": [
+                "Steak de poulet",
+                "Steak végétal"
+            ]
+        },
+        {
+            "id": "369fb909-409b-4da3-876e-a5e15c0ad2a6",
+            "nom": "Viande hachée",
+            "catégorie": "Viande",
+            "sous_catégorie": "Bœuf",
+            "unité": "kg",
+            "calories": 240,
+            "protéines": 25,
+            "glucides": 0,
+            "lipides": 16,
+            "alternatives": [
+                "Viande hachée de volaille",
+                "Lentilles"
+            ]
+        },
+        {
+            "id": "3f67ca1d-5d63-45c0-a96d-6c7913c4f19d",
+            "nom": "Escalope de poulet",
+            "catégorie": "Viande",
+            "sous_catégorie": "Volaille",
+            "unité": "kg",
+            "calories": 239,
+            "protéines": 27,
+            "glucides": 0,
+            "lipides": 14,
+            "alternatives": [
+                "Escalope de dinde",
+                "Tofu"
+            ]
+        },
+        {
+            "id": "b5691166-08c6-410c-8869-651d7e78fe27",
+            "nom": "Rôti",
+            "catégorie": "Viande",
+            "sous_catégorie": "Bœuf",
+            "unité": "kg",
+            "calories": 260,
+            "protéines": 28,
+            "glucides": 0,
+            "lipides": 17,
+            "alternatives": [
+                "Rôti de porc",
+                "Rôti de légumes"
+            ]
+        },
+        {
+            "id": "49a9f83e-00a8-4c83-bb02-2c98ef65a551",
+            "nom": "Filet mignon",
+            "catégorie": "Viande",
+            "sous_catégorie": "Porc",
+            "unité": "kg",
+            "calories": 270,
+            "protéines": 29,
+            "glucides": 0,
+            "lipides": 18,
+            "alternatives": [
+                "Filet de bœuf",
+                "Tofu fumé"
+            ]
+        },
+        {
+            "id": "d68d2785-29c6-4ad4-aaf4-6331e67f36bd",
+            "nom": "Poulet entier",
+            "catégorie": "Viande",
+            "sous_catégorie": "Volaille",
+            "unité": "kg",
+            "calories": 239,
+            "protéines": 27,
+            "glucides": 0,
+            "lipides": 14,
+            "alternatives": [
+                "Dinde",
+                "Légumes farcis"
+            ]
+        },
+        {
+            "id": "527574f5-51bc-447f-90a9-ecff027cca5c",
+            "nom": "Pignon de poulet",
+            "catégorie": "Viande",
+            "sous_catégorie": "Volaille",
+            "unité": "kg",
+            "calories": 239,
+            "protéines": 27,
+            "glucides": 0,
+            "lipides": 14,
+            "alternatives": [
+                "Escalope de dinde",
+                "Tofu"
+            ]
+        },
+        {
+            "id": "6b03cd64-a0c2-4cbd-901e-92baa5e2c245",
+            "nom": "Cuisse de poulet",
+            "catégorie": "Viande",
+            "sous_catégorie": "Volaille",
+            "unité": "kg",
+            "calories": 239,
+            "protéines": 27,
+            "glucides": 0,
+            "lipides": 14,
+            "alternatives": [
+                "Cuisse de dinde",
+                "Tofu"
+            ]
+        },
+        {
+            "id": "cbd0914f-89d8-429f-9be7-5aa2a88d872e",
+            "nom": "Blanc de poulet",
+            "catégorie": "Charcuterie",
+            "sous_catégorie": "Volaille",
+            "unité": "kg",
+            "calories": 165,
+            "protéines": 31,
+            "glucides": 0,
+            "lipides": 3.6,
+            "alternatives": [
+                "Jambon blanc",
+                "Tofu fumé"
+            ]
+        },
+        {
+            "id": "524e5d0f-1add-4862-80b6-a3896ba995a9",
+            "nom": "Chorizo",
+            "catégorie": "Charcuterie",
+            "sous_catégorie": "Saucisses",
+            "unité": "kg",
+            "calories": 455,
+            "protéines": 24,
+            "glucides": 1.9,
+            "lipides": 38,
+            "alternatives": [
+                "Saucisse fumée",
+                "Saucisse végétale"
+            ]
+        },
+        {
+            "id": "2d34bf93-d840-402e-8df1-32347f1785ce",
+            "nom": "Saucisson",
+            "catégorie": "Charcuterie",
+            "sous_catégorie": "Saucisses",
+            "unité": "kg",
+            "calories": 500,
+            "protéines": 22,
+            "glucides": 2,
+            "lipides": 45,
+            "alternatives": [
+                "Jambon sec",
+                "Saucisson végétal"
+            ]
+        },
+        {
+            "id": "7829b1dd-4e74-43ec-a525-8863ed5758e8",
+            "nom": "Bacon",
+            "catégorie": "Charcuterie",
+            "sous_catégorie": "Porc",
+            "unité": "kg",
+            "calories": 541,
+            "protéines": 37,
+            "glucides": 1.4,
+            "lipides": 42,
+            "alternatives": [
+                "Bacon de dinde",
+                "Bacon végétal"
+            ]
+        },
+        {
+            "id": "0115de87-382a-4b24-b20e-08210f761df8",
+            "nom": "Lardon",
+            "catégorie": "Charcuterie",
+            "sous_catégorie": "Porc",
+            "unité": "kg",
+            "calories": 541,
+            "protéines": 37,
+            "glucides": 1.4,
+            "lipides": 42,
+            "alternatives": [
+                "Lardons de volaille",
+                "Lardons végétaux"
+            ]
+        },
+        {
+            "id": "655bdd07-0059-47a8-857e-50e2dd81e397",
+            "nom": "Mortadelle",
+            "catégorie": "Charcuterie",
+            "sous_catégorie": "Saucisses",
+            "unité": "kg",
+            "calories": 311,
+            "protéines": 16,
+            "glucides": 1.5,
+            "lipides": 27,
+            "alternatives": [
+                "Salami",
+                "Mortadelle végétale"
+            ]
+        },
+        {
+            "id": "e9abf46a-a5e5-41a1-aa7f-b0f5f7d16424",
+            "nom": "Poisson pané",
+            "catégorie": "Poisson",
+            "sous_catégorie": "Préparations",
+            "unité": "kg",
+            "calories": 200,
+            "protéines": 15,
+            "glucides": 10,
+            "lipides": 12,
+            "alternatives": [
+                "Filet de poisson",
+                "Tofu pané"
+            ]
+        },
+        {
+            "id": "7053cce4-89ba-4076-90f5-f3da4ad7ec70",
+            "nom": "Merlan",
+            "catégorie": "Poisson",
+            "sous_catégorie": "Poisson blanc",
+            "unité": "kg",
+            "calories": 90,
+            "protéines": 19,
+            "glucides": 0,
+            "lipides": 1,
+            "alternatives": [
+                "Cabillaud",
+                "Colin"
+            ]
+        },
+        {
+            "id": "1685612d-c688-43e1-b7f3-f4e74f29ab47",
+            "nom": "Saumon",
+            "catégorie": "Poisson",
+            "sous_catégorie": "Poisson gras",
+            "unité": "kg",
+            "calories": 208,
+            "protéines": 20,
+            "glucides": 0,
+            "lipides": 13,
+            "alternatives": [
+                "Truite",
+                "Maquereau"
+            ]
+        },
+        {
+            "id": "5b847ae8-37e9-40e4-8bda-f72ee587b516",
+            "nom": "Thon",
+            "catégorie": "Poisson",
+            "sous_catégorie": "Poisson gras",
+            "unité": "kg",
+            "calories": 132,
+            "protéines": 29,
+            "glucides": 0,
+            "lipides": 1,
+            "alternatives": [
+                "Saumon",
+                "Sardine"
+            ]
+        },
+        {
+            "id": "0b4dca29-748a-4228-8c18-1c7cf23a1f2e",
+            "nom": "Carotte",
+            "catégorie": "Légumes",
+            "sous_catégorie": "Racines",
+            "unité": "kg",
+            "calories": 41,
+            "protéines": 0.9,
+            "glucides": 10,
+            "lipides": 0.2,
+            "alternatives": [
+                "Patate douce",
+                "Navet"
+            ]
+        },
+        {
+            "id": "359f390b-6451-4f66-84cc-4c7da265f078",
+            "nom": "Petit pois",
+            "catégorie": "Légumes",
+            "sous_catégorie": "Légumineuses",
+            "unité": "kg",
+            "calories": 81,
+            "protéines": 5,
+            "glucides": 14,
+            "lipides": 0.4,
+            "alternatives": [
+                "Haricots verts",
+                "Épinards"
+            ]
+        },
+        {
+            "id": "3f8a9ddd-92c5-4561-8b7a-ce89aff2d320",
+            "nom": "Choux-fleur",
+            "catégorie": "Légumes",
+            "sous_catégorie": "Crucifères",
+            "unité": "kg",
+            "calories": 25,
+            "protéines": 2,
+            "glucides": 5,
+            "lipides": 0.3,
+            "alternatives": [
+                "Brocolis",
+                "Chou romanesco"
+            ]
+        },
+        {
+            "id": "7c7313e8-0e25-40de-8251-dcc8e0c4c6bc",
+            "nom": "Potimarron",
+            "catégorie": "Légumes",
+            "sous_catégorie": "Courges",
+            "unité": "kg",
+            "calories": 26,
+            "protéines": 1,
+            "glucides": 6,
+            "lipides": 0.1,
+            "alternatives": [
+                "Courge butternut",
+                "Citrouille"
+            ]
+        },
+        {
+            "id": "a72734c8-e3e4-4113-8646-699ab307114b",
+            "nom": "Haricot vert",
+            "catégorie": "Légumes",
+            "sous_catégorie": "Légumineuses",
+            "unité": "kg",
+            "calories": 31,
+            "protéines": 1.8,
+            "glucides": 7,
+            "lipides": 0.2,
+            "alternatives": [
+                "Petit pois",
+                "Épinards"
+            ]
+        },
+        {
+            "id": "94d29f88-8e00-48a2-a84d-f6ed51499d40",
+            "nom": "Épinard",
+            "catégorie": "Légumes",
+            "sous_catégorie": "Légumes verts",
+            "unité": "kg",
+            "calories": 23,
+            "protéines": 2.9,
+            "glucides": 3.6,
+            "lipides": 0.4,
+            "alternatives": [
+                "Blette",
+                "Kale"
+            ]
+        },
+        {
+            "id": "c954c4d0-1c0a-47fe-8937-b6fcb9358c0c",
+            "nom": "Brocolis",
+            "catégorie": "Légumes",
+            "sous_catégorie": "Crucifères",
+            "unité": "kg",
+            "calories": 34,
+            "protéines": 2.8,
+            "glucides": 6.6,
+            "lipides": 0.4,
+            "alternatives": [
+                "Choux-fleur",
+                "Chou romanesco"
+            ]
+        },
+        {
+            "id": "a5c46a87-b597-417b-8f9e-a3593f97ae87",
+            "nom": "Pot-au-feu",
+            "catégorie": "Légumes",
+            "sous_catégorie": "Préparations",
+            "unité": "kg",
+            "calories": 120,
+            "protéines": 8,
+            "glucides": 10,
+            "lipides": 5,
+            "alternatives": [
+                "Soupe",
+                "Ragoût"
+            ]
+        },
+        {
+            "id": "3779f367-8a2c-4ed4-9ed5-eb85552f1d03",
+            "nom": "Soupe",
+            "catégorie": "Légumes",
+            "sous_catégorie": "Préparations",
+            "unité": "L",
+            "calories": 50,
+            "protéines": 2,
+            "glucides": 8,
+            "lipides": 1,
+            "alternatives": [
+                "Potage",
+                "Velouté"
+            ]
+        },
+        {
+            "id": "80fd355d-7021-4002-8c32-595c7f98a272",
+            "nom": "Riz",
+            "catégorie": "Légumes",
+            "sous_catégorie": null,
+            "unité": "kg",
+            "calories": 800,
+            "protéines": 7,
+            "glucides": 80,
+            "lipides": 0.7,
+            "alternatives": [
+                "Quinoa",
+                "Boulgour"
+            ]
+        },
+        {
+            "id": "bb864550-f743-4c06-9e0f-84405eeecb9c",
+            "nom": "Pâtes",
+            "catégorie": "Féculents",
+            "sous_catégorie": "Préparations",
+            "unité": "kg",
+            "calories": 371,
+            "protéines": 13,
+            "glucides": 75,
+            "lipides": 1.5,
+            "alternatives": [
+                "Riz",
+                "Quinoa"
+            ]
+        },
+        {
+            "id": "6bb94a6c-d0f5-400e-981a-b7043d9f105d",
+            "nom": "Quenelle",
+            "catégorie": "Féculents",
+            "sous_catégorie": "Préparations",
+            "unité": "kg",
+            "calories": 200,
+            "protéines": 8,
+            "glucides": 20,
+            "lipides": 10,
+            "alternatives": [
+                "Gnocchi",
+                "Raviolis"
+            ]
+        },
+        {
+            "id": "807ada05-818d-4626-a817-514640afed96",
+            "nom": "Pomme de terre",
+            "catégorie": "Féculents",
+            "sous_catégorie": "Tubercules",
+            "unité": "kg",
+            "calories": 77,
+            "protéines": 2,
+            "glucides": 17,
+            "lipides": 0.1,
+            "alternatives": [
+                "Patate douce",
+                "Igname"
+            ]
+        },
+        {
+            "id": "40170c1b-899c-45c7-9287-a07f27e34a34",
+            "nom": "Lentille",
+            "catégorie": "Féculents",
+            "sous_catégorie": "Légumineuses",
+            "unité": "kg",
+            "calories": 116,
+            "protéines": 9,
+            "glucides": 20,
+            "lipides": 0.4,
+            "alternatives": [
+                "Pois chiches",
+                "Haricots rouges"
+            ]
+        },
+        {
+            "id": "dd824a87-29f3-4a8e-b790-664d26957385",
+            "nom": "Pain",
+            "catégorie": "Féculents",
+            "sous_catégorie": "Céréales",
+            "unité": "kg",
+            "calories": 265,
+            "protéines": 9,
+            "glucides": 49,
+            "lipides": 3.2,
+            "alternatives": [
+                "Pain complet",
+                "Pain sans gluten"
+            ]
+        },
+        {
+            "id": "95c65ff7-f728-4236-981c-5d962bf693b1",
+            "nom": "Chips",
+            "catégorie": "Féculents",
+            "sous_catégorie": "Snacks",
+            "unité": "kg",
+            "calories": 536,
+            "protéines": 7,
+            "glucides": 53,
+            "lipides": 35,
+            "alternatives": [
+                "Crackers",
+                "Bretzels"
+            ]
+        },
+        {
+            "id": "628c9c37-7849-49d8-a235-894f39edb711",
+            "nom": "Pâte à pizza",
+            "catégorie": "Féculents",
+            "sous_catégorie": "Préparations",
+            "unité": "kg",
+            "calories": 265,
+            "protéines": 7,
+            "glucides": 49,
+            "lipides": 3.2,
+            "alternatives": [
+                "Pâte feuilletée",
+                "Pâte brisée"
+            ]
+        },
+        {
+            "id": "c5108417-2cbb-4532-8ffe-2b41155fa54d",
+            "nom": "Pâte feuilletée",
+            "catégorie": "Féculents",
+            "sous_catégorie": "Préparations",
+            "unité": "kg",
+            "calories": 558,
+            "protéines": 7,
+            "glucides": 45,
+            "lipides": 38,
+            "alternatives": [
+                "Pâte à pizza",
+                "Pâte brisée"
+            ]
+        },
+        {
+            "id": "2ead43fc-032c-4fb0-9f4b-c7d7dba71632",
+            "nom": "Pâte brisée",
+            "catégorie": "Féculents",
+            "sous_catégorie": "Préparations",
+            "unité": "kg",
+            "calories": 502,
+            "protéines": 6,
+            "glucides": 47,
+            "lipides": 33,
+            "alternatives": [
+                "Pâte feuilletée",
+                "Pâte à pizza"
+            ]
+        },
+        {
+            "id": "f6e5429b-5b5c-40ea-b9f9-bbc50a597688",
+            "nom": "Compote",
+            "catégorie": "Dessert fromage",
+            "sous_catégorie": "Fruits",
+            "unité": "kg",
+            "calories": 68,
+            "protéines": 0.3,
+            "glucides": 17,
+            "lipides": 0.1,
+            "alternatives": [
+                "Fruits frais",
+                "Yaourt"
+            ]
+        },
+        {
+            "id": "87312bfd-521c-46bc-bde1-68d83f71daac",
+            "nom": "Yaourt",
+            "catégorie": "Dessert fromage",
+            "sous_catégorie": "Produits laitiers",
+            "unité": "kg",
+            "calories": 59,
+            "protéines": 3.5,
+            "glucides": 4.7,
+            "lipides": 3.3,
+            "alternatives": [
+                "Fromage blanc",
+                "Yaourt végétal"
+            ]
+        },
+        {
+            "id": "8d4d05f4-8e90-4bac-a52c-06b2be1caf09",
+            "nom": "Laitière",
+            "catégorie": "Dessert fromage",
+            "sous_catégorie": "Produits laitiers",
+            "unité": "kg",
+            "calories": 120,
+            "protéines": 3,
+            "glucides": 20,
+            "lipides": 3,
+            "alternatives": [
+                "Yaourt",
+                "Fromage blanc"
+            ]
+        },
+        {
+            "id": "671c5fbb-5f5c-4fbc-a7dc-5951c7b1f7f5",
+            "nom": "Gruyère râpé",
+            "catégorie": "Dessert fromage",
+            "sous_catégorie": "Fromages",
+            "unité": "kg",
+            "calories": 413,
+            "protéines": 30,
+            "glucides": 0.1,
+            "lipides": 33,
+            "alternatives": [
+                "Parmesan",
+                "Emmental"
+            ]
+        },
+        {
+            "id": "6bf72573-14c0-4852-b248-158cbeba375e",
+            "nom": "Huile d'olive",
+            "catégorie": "Epices et condiments base",
+            "sous_catégorie": "Huiles",
+            "unité": "Cuillère a café",
+            "calories": 884,
+            "protéines": 0,
+            "glucides": 0,
+            "lipides": 100,
+            "alternatives": [
+                "Huile de tournesol",
+                "Huile de coco"
+            ]
+        },
+        {
+            "id": "f817c6b0-dce4-4226-bbd3-bd51202f01a2",
+            "nom": "Huile de noix",
+            "catégorie": "Epices et condiments base",
+            "sous_catégorie": "Huiles",
+            "unité": "L",
+            "calories": 884,
+            "protéines": 0,
+            "glucides": 0,
+            "lipides": 100,
+            "alternatives": [
+                "Huile d'olive",
+                "Huile de colza"
+            ]
+        },
+        {
+            "id": "88b28e96-1bf2-492d-9d57-c8a7e8f0c145",
+            "nom": "Huile",
+            "catégorie": "Epices et condiments base",
+            "sous_catégorie": "Huiles",
+            "unité": "L",
+            "calories": 884,
+            "protéines": 0,
+            "glucides": 0,
+            "lipides": 100,
+            "alternatives": [
+                "Huile d'olive",
+                "Huile de tournesol"
+            ]
+        },
+        {
+            "id": "9df04473-4f1e-4618-b431-ed3107d3f42d",
+            "nom": "Chapelure",
+            "catégorie": "Epices et condiments base",
+            "sous_catégorie": "Farines",
+            "unité": "kg",
+            "calories": 395,
+            "protéines": 13,
+            "glucides": 72,
+            "lipides": 5,
+            "alternatives": [
+                "Farine",
+                "Panko"
+            ]
+        },
+        {
+            "id": "90d3baad-1464-4509-8ceb-067b528825e3",
+            "nom": "Sel",
+            "catégorie": "Epices et condiments base",
+            "sous_catégorie": "Condiments",
+            "unité": "kg",
+            "calories": 0,
+            "protéines": 0,
+            "glucides": 0,
+            "lipides": 0,
+            "alternatives": [
+                "Sel de mer",
+                "Sel rose"
+            ]
+        },
+        {
+            "id": "57895a48-7310-4ed8-971c-48975b8a2f96",
+            "nom": "Beurre",
+            "catégorie": "Epices et condiments base",
+            "sous_catégorie": "Produits laitiers",
+            "unité": "kg",
+            "calories": 717,
+            "protéines": 0.9,
+            "glucides": 0.1,
+            "lipides": 81,
+            "alternatives": [
+                "Margarine",
+                "Beurre végétal"
+            ]
+        },
+        {
+            "id": "8eb21774-beaf-4594-95ee-6191ae27e357",
+            "nom": "Lait",
+            "catégorie": "Epices et condiments base",
+            "sous_catégorie": "Produits laitiers",
+            "unité": "L",
+            "calories": 42,
+            "protéines": 3.4,
+            "glucides": 4.8,
+            "lipides": 1,
+            "alternatives": [
+                "Lait d'amande",
+                "Lait de soja"
+            ]
+        },
+        {
+            "id": "b5333039-49eb-4e9e-af3d-43c36476f79d",
+            "nom": "Farine",
+            "catégorie": "Epices et condiments base",
+            "sous_catégorie": "Farines",
+            "unité": "kg",
+            "calories": 364,
+            "protéines": 10,
+            "glucides": 76,
+            "lipides": 1,
+            "alternatives": [
+                "Farine de blé complet",
+                "Farine sans gluten"
+            ]
+        },
+        {
+            "id": "78bb1b46-8d73-45c8-af50-c158e66ef835",
+            "nom": "Œuf",
+            "catégorie": "Epices et condiments base",
+            "sous_catégorie": "Produits animaux",
+            "unité": "pièce",
+            "calories": 155,
+            "protéines": 13,
+            "glucides": 1.1,
+            "lipides": 11,
+            "alternatives": [
+                "Œuf de caille",
+                "Substitut d'œuf"
+            ]
+        },
+        {
+            "id": "7393ae36-ef82-40fa-a450-15b3f616fa20",
+            "nom": "Crème fraîche",
+            "catégorie": "Epices et condiments base",
+            "sous_catégorie": "Produits laitiers",
+            "unité": "kg",
+            "calories": 340,
+            "protéines": 2,
+            "glucides": 3,
+            "lipides": 36,
+            "alternatives": [
+                "Crème végétale",
+                "Yaourt grec"
+            ]
+        },
+        {
+            "id": "78962a9c-f600-410f-82d3-44422a78844c",
+            "nom": "Moutarde",
+            "catégorie": "Epices et condiments base",
+            "sous_catégorie": "Condiments",
+            "unité": "kg",
+            "calories": 66,
+            "protéines": 4.4,
+            "glucides": 5.8,
+            "lipides": 3.3,
+            "alternatives": [
+                "Mayonnaise",
+                "Ketchup"
+            ]
+        },
+        {
+            "id": "aee5fc73-cbfe-4da2-af06-ad522a4ba979",
+            "nom": "Brioche tressée",
+            "catégorie": "Gouter et petit dejeuner",
+            "sous_catégorie": "Pâtisseries",
+            "unité": "pièce",
+            "calories": 300,
+            "protéines": 6,
+            "glucides": 45,
+            "lipides": 12,
+            "alternatives": [
+                "Pain au lait",
+                "Croissant"
+            ]
+        },
+        {
+            "id": "94bac85d-c936-40ad-8952-609d2f900a13",
+            "nom": "Céréales",
+            "catégorie": "Gouter et petit dejeuner",
+            "sous_catégorie": "Céréales",
+            "unité": "kg",
+            "calories": 379,
+            "protéines": 8,
+            "glucides": 84,
+            "lipides": 1.5,
+            "alternatives": [
+                "Muesli",
+                "Flocons d'avoine"
+            ]
+        },
+        {
+            "id": "0d556555-ec72-430b-9cf3-f1e489f2cf5a",
+            "nom": "Nutella",
+            "catégorie": "Gouter et petit dejeuner",
+            "sous_catégorie": "Pâtes à tartiner",
+            "unité": "kg",
+            "calories": 539,
+            "protéines": 6.3,
+            "glucides": 56,
+            "lipides": 31,
+            "alternatives": [
+                "Confiture",
+                "Pâte d'amande"
+            ]
+        },
+        {
+            "id": "47e79dfc-cac7-4ac2-adac-06c2d8e5600c",
+            "nom": "Choco",
+            "catégorie": "Gouter et petit dejeuner",
+            "sous_catégorie": "Boissons",
+            "unité": "L",
+            "calories": 80,
+            "protéines": 3,
+            "glucides": 12,
+            "lipides": 2,
+            "alternatives": [
+                "Lait chocolaté",
+                "Café"
+            ]
+        },
+        {
+            "id": "ed5c6baf-2892-47f2-b9fd-c47bd814f9bf",
+            "nom": "Gâteau marbré",
+            "catégorie": "Gouter et petit dejeuner",
+            "sous_catégorie": "Pâtisseries",
+            "unité": "pièce",
+            "calories": 350,
+            "protéines": 5,
+            "glucides": 50,
+            "lipides": 15,
+            "alternatives": [
+                "Gâteau au chocolat",
+                "Gâteau nature"
+            ]
+        },
+        {
+            "id": "6d2903d5-f114-47a7-b2f2-876ce69141fd",
+            "nom": "Ballisto Jaune",
+            "catégorie": "Gouter et petit dejeuner",
+            "sous_catégorie": "Snacks",
+            "unité": "pièce",
+            "calories": 200,
+            "protéines": 3,
+            "glucides": 30,
+            "lipides": 8,
+            "alternatives": [
+                "Barre céréalière",
+                "Biscuit"
+            ]
+        },
+        {
+            "id": "022a9bda-47d6-42db-a249-efeb061d4025",
+            "nom": "Confiture",
+            "catégorie": "Gouter et petit dejeuner",
+            "sous_catégorie": "Pâtes à tartiner",
+            "unité": "kg",
+            "calories": 260,
+            "protéines": 0.3,
+            "glucides": 68,
+            "lipides": 0.1,
+            "alternatives": [
+                "Miel",
+                "Pâte d'amande"
+            ]
+        },
+        {
+            "id": "d690d41d-1cfb-4e75-8836-fc720f754fc7",
+            "nom": "Café",
+            "catégorie": "Gouter et petit dejeuner",
+            "sous_catégorie": "Boissons",
+            "unité": "L",
+            "calories": 0,
+            "protéines": 0,
+            "glucides": 0,
+            "lipides": 0,
+            "alternatives": [
+                "Thé",
+                "Chocolat chaud"
+            ]
+        },
+        {
+            "id": "f3bd9503-4c25-4f07-b478-77fd7b2f0bae",
+            "nom": "test1",
+            "catégorie": "test",
+            "sous_catégorie": "test",
+            "unité": "boîte",
+            "calories": 20,
+            "alternatives": [
+                ""
+            ]
+        }
+    ]
 }

@@ -1,33 +1,66 @@
 {
     "recettes": [
         {
+            "id": 1,
             "nom": "Poulet rôti",
             "categorie": "plat_principal",
+            "description": "Un classique du poulet rôti, simple et savoureux.",
             "personnes": 4,
             "difficulte": "facile",
+            "temps_preparation": 15,
+            "temps_cuisson": 60,
             "image": "poulet_roti.jpg",
             "ingredients": [
                 {
                     "nom": "Poulet",
                     "quantite": 1.0,
-                    "unite": "piece"
+                    "unite": "unite"
+                },
+                {
+                    "nom": "Beurre",
+                    "quantite": 50,
+                    "unite": "g"
+                },
+                {
+                    "nom": "Sel",
+                    "quantite": 1,
+                    "unite": "cac"
+                },
+                {
+                    "nom": "Poivre",
+                    "quantite": 1,
+                    "unite": "cac"
                 }
             ],
             "etapes": [
-                "Préchauffez le four à 180°C.",
-                "Assaisonnez le poulet avec du sel, du poivre et du beurre.",
-                "Enfournez le poulet pendant 1 heure en arrosant régulièrement.",
-                "qdfdsdfdffd",
-                "sqssddqs dqs dqs"
+                {
+                    "ordre": 1,
+                    "description": "Préchauffez le four à 180°C.",
+                    "temps": 5
+                },
+                {
+                    "ordre": 2,
+                    "description": "Assaisonnez le poulet avec du sel, du poivre et du beurre.",
+                    "temps": 10
+                },
+                {
+                    "ordre": 3,
+                    "description": "Enfournez le poulet pendant 1 heure en arrosant régulièrement.",
+                    "temps": 60
+                }
             ],
-            "temps_cuisson": 25
+            "tags": ["poulet", "four", "classique"]
         },
         {
+            "id": 2,
             "nom": "Salade César",
             "categorie": "entree",
+            "description": "Une salade César fraîche et croquante.",
             "personnes": 2,
             "difficulte": "facile",
-            "image": "salade-cesar.webp",
+            "temps_preparation": 10,
+            "temps_cuisson": 0,
+            "image": "salade_cesar.webp",
             "ingredients": [
                 {
                     "nom": "Laitue",
@@ -43,13 +76,82 @@
                     "nom": "Croûtons",
                     "quantite": 50,
                     "unite": "g"
+                },
+                {
+                    "nom": "Sauce César",
+                    "quantite": 50,
+                    "unite": "ml"
                 }
             ],
             "etapes": [
-                "Lavez et coupez la laitue.",
-                "Ajoutez le poulet grillé et les croûtons.",
-                "Servez avec une sauce César."
-            ]
+                {
+                    "ordre": 1,
+                    "description": "Lavez et coupez la laitue.",
+                    "temps": 5
+                },
+                {
+                    "ordre": 2,
+                    "description": "Ajoutez le poulet grillé et les croûtons.",
+                    "temps": 3
+                },
+                {
+                    "ordre": 3,
+                    "description": "Servez avec une sauce César.",
+                    "temps": 2
+                }
+            ],
+            "tags": ["salade", "rapide", "poulet"]
+        },
+        {
+            "id": 3,
+            "nom": "Crêpes",
+            "categorie": "dessert",
+            "description": "Des crêpes légères et moelleuses, parfaites pour le dessert ou le petit-déjeuner.",
+            "personnes": 4,
+            "difficulte": "facile",
+            "temps_preparation": 10,
+            "temps_cuisson": 20,
+            "image": "crepes.jpg",
+            "ingredients": [
+                {
+                    "nom": "Lait",
+                    "quantite": 250,
+                    "unite": "ml"
+                },
+                {
+                    "nom": "Œuf",
+                    "quantite": 6,
+                    "unite": "unite"
+                },
+                {
+                    "nom": "Farine",
+                    "quantite": 250,
+                    "unite": "g"
+                },
+                {
+                    "nom": "Sucre",
+                    "quantite": 50,
+                    "unite": "g"
+                }
+            ],
+            "etapes": [
+                {
+                    "ordre": 1,
+                    "description": "Mélangez la farine, le sucre et les œufs dans un bol.",
+                    "temps": 5
+                },
+                {
+                    "ordre": 2,
+                    "description": "Ajoutez progressivement le lait en remuant pour éviter les grumeaux.",
+                    "temps": 5
+                },
+                {
+                    "ordre": 3,
+                    "description": "Faites cuire les crêpes dans une poêle chaude légèrement beurrée.",
+                    "temps": 20
+                }
+            ],
+            "tags": ["crêpes", "dessert", "petit-déjeuner"]
         }
     ]
 }
